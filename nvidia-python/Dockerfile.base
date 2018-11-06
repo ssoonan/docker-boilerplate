@@ -9,4 +9,10 @@ RUN apt-get update && apt-get install -y \
 	apt-get autoremove && \
 	rm -rf /var/lib/apt/lists/*
 
+ENV LC_ALL C.UTF-8
+ENV LANG C.UTF-8
+
+RUN pip3 install -U pip
+RUN pip3 install pipenv
+
 CMD [ "python3" ]
